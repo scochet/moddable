@@ -22,6 +22,7 @@ import Timer from "timer";
 
 const HEALTH_THERMOMETER_SERVICE_UUID = uuid`1809`;
 const BATTERY_SERVICE_UUID = uuid`180F`;
+const SERVICE_CHANGED_UUID = uuid`1801`;
 
 class HealthThermometerService extends BLEServer {
 	onReady() {
@@ -34,7 +35,7 @@ class HealthThermometerService extends BLEServer {
 	onDisconnected() {
 		this.stopMeasurements();
 		this.startAdvertising({
-			advertisingData: {flags: 6, completeName: this.deviceName, completeUUID16List: [HEALTH_THERMOMETER_SERVICE_UUID, BATTERY_SERVICE_UUID]}
+			advertisingData: {flags: 6, completeName: this.deviceName, completeUUID16List: [HEALTH_THERMOMETER_SERVICE_UUID, BATTERY_SERVICE_UUID, SERVICE_CHANGED_UUID]}
 		});
 	}
 	onCharacteristicNotifyEnabled(characteristic) {
