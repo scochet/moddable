@@ -18,6 +18,8 @@ As mentioned in the Apple Accessory Design Guidelines document:
 
 It came out to be really easy in Moddable.
 
-(https://developer.apple.com/forums/thread/120689)
+https://developer.apple.com/forums/thread/120689
 
-(https://developer.apple.com/forums/thread/19381)
+https://stackoverflow.com/questions/29203983/clearing-ios-ble-cache
+
+https://developer.apple.com/forums/thread/19381
